@@ -1,0 +1,13 @@
+= Portpublisher - it publishes ports!
+
+Make a local port from your machine publicly available in a second
+
+== usecases
+
+* Show off your newest cool project to your friends as-it-is
+* alpha testing with livechanges
+* testing callbackfunctions from paymentproviders - it is such a relief
+
+== Installation
+
+  % gem install portpublisher

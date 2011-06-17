@@ -1,0 +1,18 @@
+#!/usr/bin/env ruby
+def usage
+  puts "portpublisher localport externport server"
+  puts "\texample: for publishing a local railsserver on example.com:5000"
+  puts "\tportpublisher.rb example.com 3000 5000"
+end
+
+
+
+if ARGV.size < 2
+  usage
+else
+  server, localport, externport = ARGV
+  externport = localhost unless externport
+  s = "ssh -A -g -R 36750:localhost:#{localport} #{server} ssh -g -L #{externport}:localhost:36750 #{server}"
+  puts s
+  system(s)
+end
