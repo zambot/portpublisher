@@ -8,6 +8,10 @@ Make a local port from your machine publicly available in a second
 * alpha testing with livechanges
 * testing callbackfunctions from paymentproviders - it is such a relief
 
+== what you need
+
+* You totally need a server for this and it must authenticate you via public key
+
 == Installation
 
   % gem install portpublisher
