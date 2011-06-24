@@ -11,7 +11,7 @@ if ARGV.size < 2
   usage
 else
   server, localport, externport = ARGV
-  externport = localhost unless externport
+  externport = localport unless externport
   s = "ssh -A -g -R 36750:localhost:#{localport} #{server} ssh -g -L #{externport}:localhost:36750 #{server}"
   puts s
   system(s)
